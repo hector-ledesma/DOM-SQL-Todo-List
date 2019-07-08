@@ -47,6 +47,21 @@ function addEdit(id) {
         editInput.className = "editing";
         editInput.name = `${id}`;
         editInput.value = eData.item;
+        editInput.addEventListener("keydown", event => {
+            if(event.isComposing || event.keyCode == 13) {
+                console.log("we here"+ editInput.value);
+                const update = new XMLHttpRequest();
+                update.open("POST", "updateItem.php", true);
+                update.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                update.send("id=" + id + "&new=" + String(editInput.value));
+                setTimeout(() => {
+                    init();
+                },10);
+            } else if (event.isComposing || event.keyCode == 27) {
+                editInput.remove();
+            }
+            //
+        });
         editDiv.appendChild(editInput);
         }
     
