@@ -32,15 +32,44 @@ button {
 }
 
 .itmCont {
-    position: relative;
+    /* position: relative; */
     background-color: orange;
     margin: 0;
     /* padding: .35rem 0; */
     padding: 0 0;
     border-bottom: 1px solid black ;
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
-    height:2rem;
+    min-height:2rem;
+}
+
+ .delBtn {
+    background-color: purple;
+    width: 2rem;
+    height: 100%;
+    flex: 1;
+}
+
+.edBtn {
+    background-color: green;
+    height: 100%;
+    width: 2rem;
+    flex: 1;
+}
+
+.itmCont .itmData {
+    background-color: aqua;
+    margin: auto 0;
+    padding-left: .5rem;
+    flex-shrink: 1;
+    flex: 10;
+    /* margin-left: 2.5rem; */
+}
+
+.editing {
+    flex-basis: 100%;
+    width: 100%;
 }
 
 .itmCont:nth-child(even) {
@@ -49,32 +78,4 @@ button {
 
 .itmCont:nth-last-child(1) {
     border-bottom: none;
-}
-
- .delBtn {
-    background-color: purple;
-    width: 2rem;
-    height: 100%;
-}
-
-.edBtn {
-    background-color: green;
-    height: 100%;
-    width: 2rem;
-}
-
-.itmCont .itmData {
-    width: 100%;
-    margin: auto 0;
-    padding-left: .5rem;
-    flex-shrink: 1;
-    /* margin-left: 2.5rem; */
-}
-
-.editing {
-    
-    position: relative;
-    display: block;
-    height: 2rem;
-    width: 10rem;
 }
