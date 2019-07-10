@@ -11,10 +11,10 @@ function init() {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(this.responseText);
         console.log(data);
-        div.innerHTML = "Data received. List length: " + data.length;
+        div.innerHTML = "";
         data.forEach(d => {
             // div.innerHTML += "<br> <button onclick="deleteItem('" + d.id + "')> X </button>" + d.item;    
-            div.innerHTML+= `<p id="${d.id}"> <button onclick="deleteItem('${d.id}')" > X </button> <button onclick="addEdit('${d.id}')" > E </button> ${d.item}</p>`;
+            div.innerHTML+= `<div class="itmCont" id="${d.id}"> <button class="delBtn" onclick="deleteItem('${d.id}')" > <i class="fas fa-trash-alt"></i> </button> <button class="edBtn" onclick="addEdit('${d.id}')" > <i class="far fa-edit"></i> </button> <span class="itmData"> ${d.item} </span> </div>`;
         });
         }
     };
@@ -39,7 +39,7 @@ function addEdit(id) {
     const edit = new XMLHttpRequest();
     edit.open("GET", "getData.php?itemid=" + id, false);
     edit.send();
-    if(editDiv.childNodes.length < 6) {
+    if(editDiv.childNodes.length < 8) {
         const eData = JSON.parse(edit.responseText);
         console.log(eData);
         editInput = document.createElement("input");

@@ -1,0 +1,81 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    margin: 0;
+    height: 0;
+}
+
+#container {
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color:red;
+    width: 40%;
+    padding: 0;
+    border: 1px solid black;
+}
+
+#addSub {
+    width: 100%;
+    border: 0px solid;
+    padding: .5rem .2rem;
+    box-sizing: border-box;
+    
+}
+#addSub:focus {
+    outline: none;
+}
+
+.itmCont {
+    position: relative;
+    background-color: orange;
+    margin: 0;
+    /* padding: .35rem 0; */
+    padding: 0 0;
+    border-bottom: 1px solid black ;
+    display: flex;
+    align-items: stretch;
+    height:2rem;
+}
+
+.itmCont:nth-child(even) {
+    background-color: yellow;
+}
+
+.itmCont:nth-last-child(1) {
+    border-bottom: none;
+}
+
+ .delBtn {
+    background-color: purple;
+    width: 2rem;
+    height: 100%;
+}
+
+.edBtn {
+    position: ;
+    background-color: green;
+    height: 100%;
+    width: 2rem;
+}
+
+.itmCont .itmData {
+    width: 100%;
+    margin: auto 0;
+    padding-left: .5rem;
+    flex-shrink: 1;
+    /* margin-left: 2.5rem; */
+}
+
+.editing {
+    
+    position: relative;
+    display: block;
+    height: 2rem;
+    width: 10rem;
+}
