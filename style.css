@@ -2,78 +2,98 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #608FA7;
 }
 button {
     padding: 0;
     border: none;
     background: none;
     margin: 0;
-    height: 0;
+    /* height: 0; */
 }
 
-#container {
-    margin: 0 auto;
-    margin-top: 100px;
-    background-color:red;
-    width: 40%;
-    padding: 0;
-    border: 1px solid black;
+#title {
+    padding: .5rem;
+    padding-left: .7rem;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #141414;
 }
 
 #addSub {
     width: 100%;
     border: 0px solid;
-    padding: .5rem .2rem;
+    padding: .5rem .7rem;
     box-sizing: border-box;
+    border-bottom: 1px solid black;
     
 }
+
+#container {
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 40%;
+    padding: 0;
+    border: .1rem solid #1C243E;
+    border-radius: .25rem;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 #addSub:focus {
     outline: none;
 }
 
 .itmCont {
     /* position: relative; */
-    background-color: orange;
+    background-color: #F1F2F6;
     margin: 0;
     /* padding: .35rem 0; */
-    padding: 0 0;
     border-bottom: 1px solid black ;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    min-height:2rem;
+    height: inherit;
+    color: #0F0F0F;
 }
 
  .delBtn {
-    background-color: purple;
+    background-color: #6A001B;
     width: 2rem;
-    height: 100%;
+    min-height: 2rem;
+    flex-basis: 100%;
     flex: 1;
+    color: #E5E5E5;
 }
 
 .edBtn {
-    background-color: green;
-    height: 100%;
+    background-color: #CD872D;
+    min-height: 2rem;
     width: 2rem;
     flex: 1;
+    flex-grow: 1;
+    color: #370000;
 }
 
 .itmCont .itmData {
-    background-color: aqua;
-    margin: auto 0;
-    padding-left: .5rem;
+    padding: .7rem;
     flex-shrink: 1;
     flex: 10;
+    min-height: 2rem;
+    overflow: auto;
     /* margin-left: 2.5rem; */
 }
 
 .editing {
     flex-basis: 100%;
     width: 100%;
+    height: 2rem;
 }
 
 .itmCont:nth-child(even) {
-    background-color: yellow;
+    background-color: #FFFFFF;
 }
 
 .itmCont:nth-last-child(1) {

@@ -10,6 +10,7 @@
 <body>
 
 <div id="container">
+    <div id="title">Todo List</div>
     <form action="addItem.php" method="POST">
         <input id="addSub" type="text" name="item" placeholder="What would you like to do">
         <!-- <button type="submit" name="submit">Submit</button> -->
