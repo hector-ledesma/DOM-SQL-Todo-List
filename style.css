@@ -92,6 +92,13 @@ button {
     height: 2rem;
 }
 
+.done {
+    color: grey;
+    text-decoration: line-through;
+    font-style: italic;
+    transition: .1s;
+}
+
 .itmCont:nth-child(even) {
     background-color: #FFFFFF;
 }
@@ -99,3 +106,26 @@ button {
 .itmCont:nth-last-child(1) {
     border-bottom: none;
 }
+
+.delBtn:hover {
+    background-color: #930019;
+    color: #FFFFFF;
+    transition: .2s;
+}
+
+.edBtn:hover {
+    background-color: #E49915;
+    color: #AA2C30;
+    transition: .2s;
+}
+
+.delBtn:active {
+    outline: none;
+    box-shadow: inset 0 0 .2rem #3B0000;
+}
+
+.edBtn:active {
+    outline: none;
+    box-shadow: inset 0 0 .4rem #B05B00;
+}
+

@@ -5,6 +5,9 @@ let data;
 
 init();
 
+
+
+
 function init() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -21,6 +24,12 @@ function init() {
     xhttp.open("GET", "printJson.php", true);
     xhttp.send();
 }
+
+document.addEventListener('click',function(e){
+    if(e.target.classList.contains("itmData")){
+        e.target.classList.toggle('done');
+     }
+ });
 
 
 function deleteItem(id) {
@@ -47,8 +56,9 @@ function addEdit(id) {
         editInput.className = "editing";
         editInput.name = `${id}`;
         editInput.value = eData.item;
+        editDiv.appendChild(editInput);
         editInput.addEventListener("keydown", event => {
-            if(event.isComposing || event.keyCode == 13) {
+            if(event.keyCode == 13) {
                 console.log("we here"+ editInput.value);
                 const update = new XMLHttpRequest();
                 update.open("POST", "updateItem.php", true);
@@ -56,13 +66,13 @@ function addEdit(id) {
                 update.send("id=" + id + "&new=" + String(editInput.value));
                 setTimeout(() => {
                     init();
-                },10);
-            } else if (event.isComposing || event.keyCode == 27) {
+                },100);
+            } else if (event.keyCode == 27) {
                 editInput.remove();
             }
             //
         });
-        editDiv.appendChild(editInput);
+        
         }
     
     
