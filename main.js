@@ -3,6 +3,8 @@ const div =  document.getElementById("demo");
 
 let data;
 
+console.log("Keep in mind that the app breaks if you press more than one edit button at a time. Have to refresh in order to bring it back to normal.")
+
 init();
 
 
